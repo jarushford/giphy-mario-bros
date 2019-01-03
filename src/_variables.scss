@@ -29,6 +29,16 @@ $outlinethin: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 }
 
+@mixin main() {
+  width: 50%;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background: $bg;
+  border-radius: 15px;
+  max-width: 500px;
+  animation: fade .5s ease forwards;
+}
+
 @keyframes glow {
   0%, 100% {
     box-shadow: 0 0 10px 1px rgba(197, 0, 0, 0.76);

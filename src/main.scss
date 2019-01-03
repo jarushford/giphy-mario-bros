@@ -2,6 +2,8 @@
 @import './containers/App/App';
 @import './components/Welcome/Welcome';
 @import './containers/SelectPlayers/SelectPlayers';
+@import './containers/GameBoard/GameBoard';
+@import './components/PlayerScore/PlayerScore';
 
 body {
   margin: 0;

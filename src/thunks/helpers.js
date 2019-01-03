@@ -1,7 +1,7 @@
 import { gifs } from '../utils/gifs'
 
 export const getIDs = (players) => {
-  const numNeeded = players * 7
+  const numNeeded = players * 5
   const IDs = []
   while (IDs.length !== numNeeded) {
     let randIndex = Math.floor(Math.random() * gifs.length)
@@ -20,12 +20,12 @@ export const buildPlayer = (players, response) => {
       {
         player: 1,
         score: 0,
-        gifs: response.splice(0, 7)
+        gifs: response.splice(0, 5)
       },
       {
         player: 2,
         score: 0,
-        gifs: response.splice(0, 7)
+        gifs: response.splice(0, 5)
       },
       {
         player: 3,
@@ -38,17 +38,17 @@ export const buildPlayer = (players, response) => {
       {
         player: 1,
         score: 0,
-        gifs: response.splice(0, 7)
+        gifs: response.splice(0, 5)
       },
       {
         player: 2,
         score: 0,
-        gifs: response.splice(0, 7)
+        gifs: response.splice(0, 5)
       },
       {
         player: 3,
         score: 0,
-        gifs: response.splice(0, 7)
+        gifs: response.splice(0, 5)
       },
       {
         player: 4,

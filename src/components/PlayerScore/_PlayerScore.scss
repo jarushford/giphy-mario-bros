@@ -1,0 +1,16 @@
+.coin {
+  background: url('./assets/coin.png');
+  background-size: cover;
+  width: 21px;
+  height: 26px;
+  display: inline-block;
+  margin: 5px 8px -7px;
+}
+
+.player-score-container {
+  margin: 10px;
+}
+
+.player-score {
+  display: inline;
+}

@@ -10,7 +10,7 @@ export const setPlayersThunk = (players) => {
       try {
         const url = `http://api.giphy.com/v1/gifs/${id}?api_key=${apiKey}`
         const response = await fetch(url)
-
+        
         if (!response.ok) {
           throw Error('Could not fetch GIFs')
         }
