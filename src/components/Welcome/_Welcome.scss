@@ -4,6 +4,7 @@
   padding: 20px 30px;
   background: $bg;
   border-radius: 15px;
+  max-width: 500px;
 }
 
 .title,
@@ -21,13 +22,13 @@
 
 .instructions {
   background: $lightbg;
-  padding: 15px 10px 10px;
+  padding: 10px;
   margin: 25px auto 30px;
   border-radius: 5px;
   color: $bg;
   font-family: 'Viga', sans-serif;
   font-size: 1.3rem;
-  box-shadow: 0 0 35px 1px rgba(197, 0, 0, 0.5);
+  box-shadow: 0 0 35px 1px $bg;
 }
 
 .start-btn {
