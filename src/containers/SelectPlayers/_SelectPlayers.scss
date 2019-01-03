@@ -1,0 +1,15 @@
+.players {
+  width: 50%;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background: $bg;
+  border-radius: 15px;
+  max-width: 500px;
+  animation: fade .5s ease forwards;
+}
+
+.three-btn,
+.four-btn {
+  @include btn();
+  margin: 30px auto;
+}
