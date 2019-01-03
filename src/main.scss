@@ -1,4 +1,6 @@
+@import './variables';
 @import './containers/App/App';
+@import './components/Welcome/Welcome';
 
 body {
   margin: 0;

@@ -1,0 +1,41 @@
+$white: #E7E7E7;
+$red: rgba(197, 0, 0, 0.76);
+$bg: #242424c7;
+$lightbg: rgba(246, 246, 246, 0.637);
+$outlinethick: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+$outlinethin: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+@mixin btn() {
+  display: block;
+  margin: 10px auto;
+  width: 170px;
+  height: 45px;
+  border: 3px solid transparent;
+  background: $red;
+  border-radius: 5px;
+  color: $white;
+  font-size: 1.4rem;
+  padding-top: 4px;
+  line-height: 38px;
+  letter-spacing: 1px;
+  font-family: 'Mario';
+  text-shadow: $outlinethin;
+  outline: none;
+  cursor: pointer;
+  transition: .5s ease;
+
+  &:hover {
+    animation: 2s glow ease infinite;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px 1px rgba(197, 0, 0, 0.76);
+    border: 3px solid transparent;
+  }
+  50% {
+    box-shadow: 0 0 30px 3px rgba(240, 184, 0, 0.76);
+    border: 3px solid black;
+  }
+}
