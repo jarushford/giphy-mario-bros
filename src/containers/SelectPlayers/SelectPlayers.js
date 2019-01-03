@@ -1,14 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
-import { setPlayers } from '../../actions'
+import { setPlayersThunk } from '../../thunks/setPlayers'
 import '../../main.scss'
 
 export function SelectPlayers({ setPlayers }) {
   return (
     <section className="players">
       <h1 className="title">Giphy Mario Bros.</h1>
-      <Link to='/home' onClick={() => setPlayers(3)} >
+      <Link to='/home' onClick={() => setPlayers(3)}>
         <button className="three-btn">
           3 Players
         </button>
@@ -23,7 +23,7 @@ export function SelectPlayers({ setPlayers }) {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  setPlayers: (players) => dispatch((setPlayers(players)))
+  setPlayers: (players) => dispatch((setPlayersThunk(players)))
 })
 
 export default connect(null, mapDispatchToProps)(SelectPlayers)
