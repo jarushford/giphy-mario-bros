@@ -12,6 +12,11 @@ export const setCurrentPlayer = (player) => ({
   player
 })
 
+export const setJudge = (player) => ({
+  type: 'SET_JUDGE',
+  player
+})
+
 export const setError = (error) => ({
   type: 'SET_ERROR',
   error
