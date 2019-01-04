@@ -5,13 +5,16 @@ import { connect } from 'react-redux'
 import { uid } from 'react-uid';
 import '../../main.scss'
 
-export function GameBoard({ players }) {
+export function GameBoard({ players, currentPlayer }) {
   if (!players.length) {
     return <Loading />
   }
 
   const scores = players.map(player => {
-    return <PlayerScore {...player} key={uid(player)} />
+    if (player.player === currentPlayer) {
+      return <PlayerScore {...player} key={uid(player)} active={true} />
+    }
+    return <PlayerScore {...player} key={uid(player)} active={false} />
   })
 
   return (
@@ -25,7 +28,8 @@ export function GameBoard({ players }) {
 }
 
 export const mapStateToProps = (state) => ({
-  players: state.players
+  players: state.players,
+  currentPlayer: state.currentPlayer
 })
 
 export default connect(mapStateToProps)(GameBoard)

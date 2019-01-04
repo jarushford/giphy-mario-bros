@@ -12,6 +12,12 @@ export const getIDs = (players) => {
   return IDs
 }
 
+export const getUnusedIDs = (IDs) => {
+  return gifs.filter(gif => {
+    return !IDs.includes(gif)
+  })
+}
+
 export const buildPlayer = (players, response) => {
   let readyPlayers
 

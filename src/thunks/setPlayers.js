@@ -1,10 +1,11 @@
 import { apiKey } from '../utils/apiKey'
-import { setPlayers, setError } from '../actions'
-import { getIDs, buildPlayer } from './helpers'
+import { setPlayers, setError, setUnusedIDs } from '../actions'
+import { getIDs, getUnusedIDs, buildPlayer } from './helpers'
 
 export const setPlayersThunk = (players) => {
   return async (dispatch) => {
     const IDs = getIDs(players)
+    const unusedIDs = getUnusedIDs(IDs)
 
     const unresolvedPromises = IDs.map(async (id) => {
       try {
@@ -25,5 +26,6 @@ export const setPlayersThunk = (players) => {
     const response = await Promise.all(unresolvedPromises)
     const readyPlayers = buildPlayer(players, response)
     dispatch(setPlayers(readyPlayers))
+    dispatch(setUnusedIDs(unusedIDs))
   }
 }

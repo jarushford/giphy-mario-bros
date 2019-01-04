@@ -1,3 +1,28 @@
 .game-board {
   @include main();
+  cursor: default;
+  min-width: 560px;
+
+  h3 {
+    text-align: center;
+    color: $white;
+    background: $red;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: 'Viga', sans-serif;
+    margin: 10px auto 30px;
+  }
+
+  h2 {
+    text-align: center;
+    color: $white;
+    font-family: 'Mario';
+    text-shadow: $outlinethin;
+    margin: 25px auto 5px;
+  }
+}
+
+.player-scores {
+  display: flex;
+  justify-content: space-around;
 }

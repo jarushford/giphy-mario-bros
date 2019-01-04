@@ -4,13 +4,26 @@
   width: 21px;
   height: 26px;
   display: inline-block;
-  margin: 5px 8px -7px;
+  margin: 5px 15px -3px 4px;
 }
 
 .player-score-container {
   margin: 10px;
+  padding: 5px 9px;
+  border-radius: 3px;
 }
 
 .player-score {
   display: inline;
+  color: $white;
+  font-size: 1.7rem;
+  font-family: 'Mario';
+}
+
+.active {
+  background: $lightbg;
+
+  .player-name {
+    color: $red;
+  }
 }
