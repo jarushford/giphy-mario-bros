@@ -12,7 +12,9 @@ export class Selection extends Component {
 
   adjustCarousel = (adj) => {
     const { adjustment}  = this.state
-    if (adjustment < 4 && adj === 1 || adjustment > 0 && adj === -1) {
+    if (adjustment < 4 && adj === 1) {
+      this.setState({ adjustment: this.state.adjustment + adj })
+    } else if (adjustment > 0 && adj === -1) {
       this.setState({ adjustment: this.state.adjustment + adj })
     }
   }
@@ -36,11 +38,15 @@ export class Selection extends Component {
 
     return (
       <section className="selection">
-        <button onClick={() => this.adjustCarousel(-1)}>prev</button>
+        <button onClick={() => this.adjustCarousel(-1)}>
+          <i class="fas fa-arrow-left" />
+        </button>
         <div className="gifs-container">
           {gifs}
         </div>
-        <button onClick={() => this.adjustCarousel(1)}>next</button>
+        <button onClick={() => this.adjustCarousel(1)}>
+          <i class="fas fa-arrow-right" />
+        </button>
       </section>
     )
   }

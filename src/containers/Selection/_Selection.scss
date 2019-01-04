@@ -5,6 +5,7 @@
   margin-top: 40px;
 
   button {
+    @include btn();
     height: 50px;
     width: 50px;
   }
@@ -14,13 +15,26 @@
   display: grid;
   width: 80%;
   overflow: hidden;
-  margin: 0 8px;
+  margin: 0 26px 0 8px;
 }
 
 .gif {
+  box-sizing: border-box;
   grid-row: 1;
   width: 250px;
   height: 200px;
   margin: 20px;
   transition: .3s ease;
+  border: 5px solid $bg;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    border: 5px solid #ffdf30;
+  }
+}
+
+.fa-arrow-left,
+.fa-arrow-right {
+  padding-top: 7px;
 }
