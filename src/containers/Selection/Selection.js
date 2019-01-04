@@ -6,22 +6,41 @@ export class Selection extends Component {
   constructor() {
     super()
     this.state = {
-      
+      adjustment: 0
+    }
+  }
+
+  adjustCarousel = (adj) => {
+    const { adjustment}  = this.state
+    if (adjustment < 4 && adj === 1 || adjustment > 0 && adj === -1) {
+      this.setState({ adjustment: this.state.adjustment + adj })
     }
   }
 
   render() {
     const { players, currentPlayer } = this.props
+    const { adjustment } = this.state
+    const style = { transform: `translateX(${adjustment * -290}px)` }
     let gifs = []
     if (players.length) {
       gifs = players[currentPlayer].gifs.map(gif => {
-        return <img src={gif.images.fixed_width.url} key={uid(gif)} />
+        return <img
+          className="gif"
+          src={gif.images.fixed_width.url}
+          key={uid(gif)}
+          alt=''
+          style={style}  
+        />
       })
     }
 
     return (
       <section className="selection">
-        {gifs}
+        <button onClick={() => this.adjustCarousel(-1)}>prev</button>
+        <div className="gifs-container">
+          {gifs}
+        </div>
+        <button onClick={() => this.adjustCarousel(1)}>next</button>
       </section>
     )
   }

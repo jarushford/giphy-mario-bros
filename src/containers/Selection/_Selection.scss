@@ -1,0 +1,26 @@
+.selection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+
+  button {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.gifs-container {
+  display: grid;
+  width: 80%;
+  overflow: hidden;
+  margin: 0 8px;
+}
+
+.gif {
+  grid-row: 1;
+  width: 250px;
+  height: 200px;
+  margin: 20px;
+  transition: .3s ease;
+}
