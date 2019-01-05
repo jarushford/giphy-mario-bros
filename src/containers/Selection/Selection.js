@@ -35,7 +35,7 @@ export class Selection extends Component {
     updatePlayerGifs({ url, player: currentPlayer - 1 })
     drawNewGifThunk(currentPlayer, unusedIDs)
     this.changePlayer()
-    this.setState({ preTurn: true })
+    this.setState({ preTurn: true, adjustment: 0 })
   }
 
   changePlayer = () => {
