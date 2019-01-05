@@ -15,3 +15,14 @@ export const captions = [
   'When you miss the edge on your recovery',
   'When Yoshi takes the fall for Mario again'
 ]
+
+export const captionHelper = (usedCaptions) => {
+  let caption = ''
+  while(!caption.length) {
+    let randNum = Math.floor(Math.random() * captions.length)
+    if (!usedCaptions.includes(captions[randNum])) {
+      caption = captions[randNum]
+    }
+  }
+  return caption
+}

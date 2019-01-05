@@ -12,6 +12,12 @@ export const getIDs = (players) => {
   return IDs
 }
 
+export const getNewID = (unusedIDs) => {
+  const randIndex = Math.floor(Math.random() * unusedIDs.length)
+  const newGif = unusedIDs[randIndex]
+  return newGif
+}
+
 export const getUnusedIDs = (IDs) => {
   return gifs.filter(gif => {
     return !IDs.includes(gif)

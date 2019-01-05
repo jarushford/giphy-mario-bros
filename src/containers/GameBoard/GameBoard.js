@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { uid } from 'react-uid';
 import '../../main.scss'
 
-export function GameBoard({ players, judge }) {
+export function GameBoard({ players, judge, caption, currentPlayer }) {
   if (!players.length) {
     return <Loading />
   }
@@ -21,15 +21,17 @@ export function GameBoard({ players, judge }) {
     <section className="game-board">
       <h1 className="title">Giphy Mario Bros.</h1>
       <div className="player-scores">{scores}</div>
-      <h3>This is an example caption. Yay!</h3>
-      <h2>This is whose turn it is!</h2>
+      <h3>{caption[0]}</h3>
+      <h2>Player {currentPlayer}, choose a GIF</h2>
     </section>
   )
 }
 
 export const mapStateToProps = (state) => ({
   players: state.players,
-  judge: state.judge
+  judge: state.judge,
+  currentPlayer: state.currentPlayer,
+  caption: state.caption
 })
 
 export default connect(mapStateToProps)(GameBoard)

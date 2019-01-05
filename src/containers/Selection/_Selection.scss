@@ -38,3 +38,9 @@
 .fa-arrow-right {
   padding-top: 7px;
 }
+
+.start-turn {
+  @include btn();
+  margin-top: 80px;
+  width: 250px;
+}

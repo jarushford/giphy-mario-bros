@@ -30,3 +30,27 @@ export const setUnusedIDs = (unused) => ({
   type: 'SET_UNUSED_IDS',
   unused
 })
+
+export const nextRound = () => ({
+  type: 'NEXT_ROUND'
+})
+
+export const setCaption = (caption) => ({
+  type: 'SET_CAPTION',
+  caption
+})
+
+export const addChoice = (choice) => ({
+  type: 'ADD_CHOICE',
+  choice
+})
+
+export const updatePlayerGifs = (url) => ({
+  type: 'UPDATE_PLAYER_GIFS',
+  url
+})
+
+export const addNewGif = (gif) => ({
+  type: 'ADD_NEW_GIF',
+  gif
+})
