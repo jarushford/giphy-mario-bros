@@ -48,10 +48,9 @@ export class Selection extends Component {
   }
 
   render() {
-    const { players, currentPlayer } = this.props
+    const { players, currentPlayer, judge, choices } = this.props
     const { adjustment } = this.state
     const style = { transform: `translateX(${adjustment * -290}px)` }
-
 
     if (!players.length) {
       return <div />
@@ -69,6 +68,32 @@ export class Selection extends Component {
           onClick={() => this.selectGif(gif.images.fixed_width.url)}
         />
       })
+    }
+    
+    if (currentPlayer === judge) {
+      gifs = choices.map(gif => {
+        return <img
+          className="gif"
+          src={gif.gif}
+          key={uid(gif)}
+          alt=''
+          style={style}
+          // Need onClick to select winner instead of select choice
+        />
+      })
+      return (
+        <section className="selection">
+          <button onClick={() => this.adjustCarousel(-1)}>
+            <i className="fas fa-arrow-left" />
+          </button>
+          <div className="gifs-container judge-choice">
+            {gifs}
+          </div>
+          <button onClick={() => this.adjustCarousel(1)}>
+            <i className="fas fa-arrow-right" />
+          </button>
+        </section>
+      )
     }
 
     if (this.state.preTurn) {
@@ -101,7 +126,9 @@ export class Selection extends Component {
 export const mapStateToProps = (state) => ({
   players: state.players,
   currentPlayer: state.currentPlayer,
-  unusedIDs: state.unusedIDs
+  unusedIDs: state.unusedIDs,
+  judge: state.judge,
+  choices: state.choices
 })
 
 export const mapDispatchToProps = (dispatch) => ({

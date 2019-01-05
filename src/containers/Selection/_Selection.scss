@@ -34,6 +34,16 @@
   }
 }
 
+.judge-choice {
+  margin: 0 30px;
+  max-width: 700px;
+  grid-gap: 0px 30px;
+}
+
+.judge-choice .gif {
+  margin: 20px auto;
+}
+
 .fa-arrow-left,
 .fa-arrow-right {
   padding-top: 7px;
