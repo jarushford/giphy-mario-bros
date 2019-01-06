@@ -1,5 +1,5 @@
 import React from 'react'
-import Loading from '../Loading/Loading'
+import Loading from '../../components/Loading/Loading'
 import PlayerScore from '../../components/PlayerScore/PlayerScore'
 import { connect } from 'react-redux'
 import { uid } from 'react-uid';

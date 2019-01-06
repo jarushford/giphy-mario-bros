@@ -1,0 +1,41 @@
+.loading {
+  width: 400px;
+  margin: 150px auto;
+}
+
+.mario {
+  height: 120px;
+  width: 90px;
+  background: url('./assets/mario.png');
+  background-size: cover;
+  animation: jump 3s ease infinite;
+}
+
+.shell {
+  height: 80px;
+  width: 80px;
+  background: url('./assets/shell.ico');
+  background-size: cover;
+  animation: shell 3s ease infinite;
+}
+
+@keyframes shell {
+  0%, 100% {
+    transform: translateX(300px) translateY(-60px);
+  }
+  50% {
+    transform: translateX(0px) translateY(-60px);
+  }
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  15%, 60% {
+    transform: translateX(150px) translateY(-100px);
+  }
+  50% {
+    transform: translateX(300px) translateY(0px);
+  }
+}
