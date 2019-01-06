@@ -12,9 +12,8 @@ export const setCurrentPlayer = (player) => ({
   player
 })
 
-export const setJudge = (player) => ({
-  type: 'SET_JUDGE',
-  player
+export const setJudge = () => ({
+  type: 'SET_JUDGE'
 })
 
 export const setError = (error) => ({
@@ -35,9 +34,17 @@ export const nextRound = () => ({
   type: 'NEXT_ROUND'
 })
 
+export const resetRound = () => ({
+  type: 'RESET_ROUND'
+})
+
 export const setCaption = (caption) => ({
   type: 'SET_CAPTION',
   caption
+})
+
+export const clearCaptions = () => ({
+  type: 'CLEAR_CAPTIONS'
 })
 
 export const addChoice = (choice) => ({

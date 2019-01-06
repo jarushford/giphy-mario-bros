@@ -1,7 +1,7 @@
 export const judgeReducer = (state = 1, action) => {
   switch (action.type) {
     case 'SET_JUDGE':
-      return action.player
+      return 1
     case 'CHANGE_JUDGE':
       if (state === action.players) {
         return 1

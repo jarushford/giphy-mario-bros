@@ -74,7 +74,7 @@ export class Selection extends Component {
       return <div />
     }
 
-    if (round === players.length * 2) {
+    if (round === players.length * 2 + 1) {
       return <Redirect to="/newgame" />
     }
 

@@ -1,0 +1,20 @@
+.round {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  display: flex;
+  color: rgb(233, 12, 12);
+  text-shadow: $outlinethin;
+  font-family: 'Mario';
+  font-size: 2rem;
+}
+
+.round-num {
+  position: relative;
+  bottom: 10px;
+}
+
+.round-total {
+  position: relative;
+  top: 10px;
+}

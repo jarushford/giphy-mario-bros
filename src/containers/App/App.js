@@ -4,6 +4,8 @@ import Welcome from '../../components/Welcome/Welcome'
 import SelectPlayers from '../SelectPlayers/SelectPlayers'
 import GameBoard from '../GameBoard/GameBoard'
 import Selection from '../Selection/Selection'
+import Round from '../../components/Round/Round'
+import NewGame from '../NewGame/NewGame'
 import '../../main.scss'
 
 class App extends Component {
@@ -16,12 +18,13 @@ class App extends Component {
           <Route path='/home' render={() => {
             return (
               <div>
+                <Round />
                 <GameBoard />
                 <Selection />
               </div>
             )
           }} />
-          <Route path='/newgame' render={() => <div>sdfsd</div>} />
+          <Route path='/newgame' component={NewGame} />
           {/* <Route component={Error}/> */}
         </Switch>
       </div>
