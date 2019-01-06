@@ -17,6 +17,14 @@ export const playersReducer = (state = [], action) => {
       newGifPlayer.gifs.push(action.gif.gif)
       state.slice().splice(action.gif.player, 1, newGifPlayer)
       return state
+    case 'SELECT_WINNER':
+      const newState = state.slice()
+      newState.forEach(player => {
+        if (player.player === action.player) {
+          player.score += 100
+        }
+      })
+      return newState
     default:
       return state
   }

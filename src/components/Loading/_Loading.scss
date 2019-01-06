@@ -1,6 +1,14 @@
 .loading {
   width: 400px;
   margin: 150px auto;
+
+  h2 {
+    color: $white;
+    text-align: center;
+    font-family: 'Mario';
+    font-size: 3rem;
+    text-shadow: $outlinethick;
+  }
 }
 
 .mario {

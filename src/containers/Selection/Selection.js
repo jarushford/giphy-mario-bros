@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addChoice, setCurrentPlayer, updatePlayerGifs } from '../../actions'
+import { addChoice, setCurrentPlayer, updatePlayerGifs, selectWinner, changeJudge, clearChoices, setCaption } from '../../actions'
+import { captionHelper } from '../../utils/captions'
 import { drawNewGifThunk } from '../../thunks/drawNewGif'
 import { uid } from 'react-uid';
 
@@ -47,6 +48,21 @@ export class Selection extends Component {
     }
   }
 
+  selectWinner = (player) => {
+    const { selectWinner, changeJudge, players, judge, setCurrentPlayer, clearChoices, setCaption, usedCaptions } = this.props
+    selectWinner(player)
+    changeJudge(players.length)
+    clearChoices()
+    setCaption(captionHelper(usedCaptions))
+    if (judge === players.length) {
+      setCurrentPlayer(2)
+    } else if (judge === players.length - 1) {
+      setCurrentPlayer(1)
+    } else {
+      setCurrentPlayer(judge + 2)
+    }
+  }
+
   render() {
     const { players, currentPlayer, judge, choices } = this.props
     const { adjustment } = this.state
@@ -78,7 +94,7 @@ export class Selection extends Component {
           key={uid(gif)}
           alt=''
           style={style}
-          // Need onClick to select winner instead of select choice
+          onClick={() => this.selectWinner(gif.player)}
         />
       })
       return (
@@ -128,14 +144,19 @@ export const mapStateToProps = (state) => ({
   currentPlayer: state.currentPlayer,
   unusedIDs: state.unusedIDs,
   judge: state.judge,
-  choices: state.choices
+  choices: state.choices,
+  usedCaptions: state.caption
 })
 
 export const mapDispatchToProps = (dispatch) => ({
   addChoice: (choice) => dispatch(addChoice(choice)),
   setCurrentPlayer: (player) => dispatch(setCurrentPlayer(player)),
   updatePlayerGifs: (url) => dispatch(updatePlayerGifs(url)),
-  drawNewGifThunk: (player, IDs) => dispatch(drawNewGifThunk(player, IDs))
+  drawNewGifThunk: (player, IDs) => dispatch(drawNewGifThunk(player, IDs)),
+  selectWinner: (player) => dispatch(selectWinner(player)),
+  changeJudge: (players) => dispatch(changeJudge(players)),
+  clearChoices: () => dispatch(clearChoices()),
+  setCaption: (caption) => dispatch(setCaption(caption))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Selection)

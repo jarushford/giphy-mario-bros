@@ -6,6 +6,7 @@ export default function Loading() {
     <div className="loading">
       <div className="mario"/>
       <div className="shell"/>
+      <h2>Loading...</h2>
     </div>
   )
 }

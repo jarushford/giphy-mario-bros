@@ -45,6 +45,10 @@ export const addChoice = (choice) => ({
   choice
 })
 
+export const clearChoices = () => ({
+  type: 'CLEAR_CHOICES'
+})
+
 export const updatePlayerGifs = (url) => ({
   type: 'UPDATE_PLAYER_GIFS',
   url
@@ -53,4 +57,14 @@ export const updatePlayerGifs = (url) => ({
 export const addNewGif = (gif) => ({
   type: 'ADD_NEW_GIF',
   gif
+})
+
+export const selectWinner = (player) => ({
+  type: 'SELECT_WINNER',
+  player
+})
+
+export const changeJudge = (players) => ({
+  type: 'CHANGE_JUDGE',
+  players
 })
