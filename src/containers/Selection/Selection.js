@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addChoice, setCurrentPlayer, updatePlayerGifs, selectWinner, changeJudge, clearChoices, setCaption } from '../../actions'
+import { addChoice, setCurrentPlayer, updatePlayerGifs, selectWinner, changeJudge, clearChoices, setCaption, nextRound } from '../../actions'
 import { captionHelper } from '../../utils/captions'
 import { drawNewGifThunk } from '../../thunks/drawNewGif'
-import { uid } from 'react-uid';
+import { uid } from 'react-uid'
+import { Redirect } from 'react-router-dom'
 
 export class Selection extends Component {
   constructor() {
@@ -49,11 +50,12 @@ export class Selection extends Component {
   }
 
   selectWinner = (player) => {
-    const { selectWinner, changeJudge, players, judge, setCurrentPlayer, clearChoices, setCaption, usedCaptions } = this.props
+    const { selectWinner, changeJudge, players, judge, setCurrentPlayer, clearChoices, setCaption, usedCaptions, nextRound } = this.props
     selectWinner(player)
     changeJudge(players.length)
     clearChoices()
     setCaption(captionHelper(usedCaptions))
+    nextRound()
     if (judge === players.length) {
       setCurrentPlayer(2)
     } else if (judge === players.length - 1) {
@@ -64,12 +66,16 @@ export class Selection extends Component {
   }
 
   render() {
-    const { players, currentPlayer, judge, choices } = this.props
+    const { players, currentPlayer, judge, choices, round } = this.props
     const { adjustment } = this.state
     const style = { transform: `translateX(${adjustment * -290}px)` }
 
     if (!players.length) {
       return <div />
+    }
+
+    if (round === players.length * 2) {
+      return <Redirect to="/newgame" />
     }
 
     let gifs = []
@@ -145,7 +151,8 @@ export const mapStateToProps = (state) => ({
   unusedIDs: state.unusedIDs,
   judge: state.judge,
   choices: state.choices,
-  usedCaptions: state.caption
+  usedCaptions: state.caption,
+  round: state.round
 })
 
 export const mapDispatchToProps = (dispatch) => ({
@@ -156,7 +163,8 @@ export const mapDispatchToProps = (dispatch) => ({
   selectWinner: (player) => dispatch(selectWinner(player)),
   changeJudge: (players) => dispatch(changeJudge(players)),
   clearChoices: () => dispatch(clearChoices()),
-  setCaption: (caption) => dispatch(setCaption(caption))
+  setCaption: (caption) => dispatch(setCaption(caption)),
+  nextRound: () => dispatch(nextRound())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Selection)

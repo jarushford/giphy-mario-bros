@@ -21,6 +21,7 @@ class App extends Component {
               </div>
             )
           }} />
+          <Route path='/newgame' render={() => <div>sdfsd</div>} />
           {/* <Route component={Error}/> */}
         </Switch>
       </div>
