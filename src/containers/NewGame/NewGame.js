@@ -2,11 +2,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs } from '../../actions';
 import { Link } from 'react-router-dom'
+import { uid } from 'react-uid'
 
 export function NewGame({ players, clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs }) {
   const finalScores = players.map(player => {
     return (
-      <h3>Player {player.player}: {player.score}</h3>
+      <h3 key={uid(player)}>Player {player.player}: {player.score}</h3>
     )
   })
 

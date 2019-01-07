@@ -1,4 +1,3 @@
-import { apiKey } from '../utils/apiKey'
 import { addNewGif, setError, setUnusedIDs } from '../actions'
 import { getNewID } from './helpers'
 
@@ -7,16 +6,11 @@ export const drawNewGifThunk = (currentPlayer, unusedIDs) => {
     try {
       const newGif = getNewID(unusedIDs)
       const newUnusedIDs = unusedIDs.filter(ID => ID !== newGif)
-
-      const url = `http://api.giphy.com/v1/gifs/${newGif}?api_key=${apiKey}`
-      const response = await fetch(url)
+      const gifs = JSON.parse(localStorage.getItem('gifs'))
       
-      if (!response.ok) {
-        throw Error('Could not fetch GIF')
-      }
+      const result = gifs.filter(gif => gif.id === newGif)
 
-      const result = await response.json()
-      dispatch(addNewGif({ gif: result.data, player: currentPlayer - 1}))
+      dispatch(addNewGif({ gif: result[0], player: currentPlayer - 1}))
       dispatch(setUnusedIDs(newUnusedIDs))
     } catch (error) {
       dispatch(setError(error.message))
