@@ -24,3 +24,9 @@
   @include btn();
   margin-top: 30px;
 }
+
+@media screen and (max-width: 400px) {
+  .final-screen {
+    width: 70%;
+  }
+}

@@ -29,3 +29,9 @@
 .start-btn {
   @include btn();
 }
+
+@media screen and (max-width: 400px) {
+  .welcome {
+    width: 70%;
+  }
+}

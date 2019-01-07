@@ -7,3 +7,9 @@
   @include btn();
   margin: 30px auto;
 }
+
+@media screen and (max-width: 400px) {
+  .players {
+    width: 70%;
+  }
+}

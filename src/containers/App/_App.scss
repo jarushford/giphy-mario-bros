@@ -25,3 +25,15 @@
     color: $white;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .App {
+    height: 130vh;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .App {
+    height: 160vh;
+  }
+}
