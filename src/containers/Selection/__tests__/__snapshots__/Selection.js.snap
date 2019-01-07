@@ -1,0 +1,839 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selection Selection Component should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Selection
+    addChoice={[MockFunction]}
+    changeJudge={[MockFunction]}
+    choices={
+      Array [
+        Object {
+          "gif": "Test1.gif",
+          "player": 2,
+        },
+        Object {
+          "gif": "Test2.gif",
+          "player": 3,
+        },
+      ]
+    }
+    clearChoices={[MockFunction]}
+    currentPlayer={2}
+    drawNewGifThunk={[MockFunction]}
+    judge={1}
+    nextRound={[MockFunction]}
+    players={
+      Array [
+        Object {
+          "gifs": Array [
+            Object {
+              "images": Object {
+                "fixed_width": Object {
+                  "url": "Testurl",
+                },
+              },
+            },
+          ],
+          "player": 1,
+          "score": 100,
+        },
+        Object {
+          "gifs": Array [
+            Object {
+              "images": Object {
+                "fixed_width": Object {
+                  "url": "Testurl",
+                },
+              },
+            },
+          ],
+          "player": 2,
+          "score": 100,
+        },
+        Object {
+          "gifs": Array [
+            Object {
+              "images": Object {
+                "fixed_width": Object {
+                  "url": "Testurl",
+                },
+              },
+            },
+          ],
+          "player": 3,
+          "score": 0,
+        },
+      ]
+    }
+    round={2}
+    selectWinner={[MockFunction]}
+    setCaption={[MockFunction]}
+    setCurrentPlayer={[MockFunction]}
+    unusedIDs={
+      Array [
+        "123",
+        "234",
+        "345",
+      ]
+    }
+    updatePlayerGifs={[MockFunction]}
+    usedCaptions={
+      Array [
+        "Test1",
+        "Test2",
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Choose GIF",
+      "className": "start-turn",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": "Choose GIF",
+    "type": "button",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Choose GIF",
+        "className": "start-turn",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": "Choose GIF",
+      "type": "button",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Selection Selection Component should match the snapshot if it is the last round 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Selection
+    addChoice={[MockFunction]}
+    changeJudge={[MockFunction]}
+    choices={
+      Array [
+        Object {
+          "gif": "Test1.gif",
+          "player": 2,
+        },
+        Object {
+          "gif": "Test2.gif",
+          "player": 3,
+        },
+      ]
+    }
+    clearChoices={[MockFunction]}
+    currentPlayer={2}
+    drawNewGifThunk={[MockFunction]}
+    judge={1}
+    nextRound={[MockFunction]}
+    players={
+      Array [
+        Object {
+          "gifs": Array [
+            Object {
+              "images": Object {
+                "fixed_width": Object {
+                  "url": "Testurl",
+                },
+              },
+            },
+          ],
+          "player": 1,
+          "score": 100,
+        },
+        Object {
+          "gifs": Array [
+            Object {
+              "images": Object {
+                "fixed_width": Object {
+                  "url": "Testurl",
+                },
+              },
+            },
+          ],
+          "player": 2,
+          "score": 100,
+        },
+        Object {
+          "gifs": Array [
+            Object {
+              "images": Object {
+                "fixed_width": Object {
+                  "url": "Testurl",
+                },
+              },
+            },
+          ],
+          "player": 3,
+          "score": 0,
+        },
+      ]
+    }
+    round={7}
+    selectWinner={[MockFunction]}
+    setCaption={[MockFunction]}
+    setCurrentPlayer={[MockFunction]}
+    unusedIDs={
+      Array [
+        "123",
+        "234",
+        "345",
+      ]
+    }
+    updatePlayerGifs={[MockFunction]}
+    usedCaptions={
+      Array [
+        "Test1",
+        "Test2",
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "push": false,
+      "to": "/newgame",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "push": false,
+        "to": "/newgame",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Selection Selection Component should match the snapshot if the judge is the current player 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Selection
+    addChoice={[MockFunction]}
+    changeJudge={[MockFunction]}
+    choices={
+      Array [
+        Object {
+          "gif": "Test1.gif",
+          "player": 2,
+        },
+        Object {
+          "gif": "Test2.gif",
+          "player": 3,
+        },
+      ]
+    }
+    clearChoices={[MockFunction]}
+    currentPlayer={1}
+    drawNewGifThunk={[MockFunction]}
+    judge={1}
+    nextRound={[MockFunction]}
+    players={
+      Array [
+        Object {
+          "gifs": Array [
+            Object {
+              "images": Object {
+                "fixed_width": Object {
+                  "url": "Testurl",
+                },
+              },
+            },
+          ],
+          "player": 1,
+          "score": 100,
+        },
+        Object {
+          "gifs": Array [
+            Object {
+              "images": Object {
+                "fixed_width": Object {
+                  "url": "Testurl",
+                },
+              },
+            },
+          ],
+          "player": 2,
+          "score": 100,
+        },
+        Object {
+          "gifs": Array [
+            Object {
+              "images": Object {
+                "fixed_width": Object {
+                  "url": "Testurl",
+                },
+              },
+            },
+          ],
+          "player": 3,
+          "score": 0,
+        },
+      ]
+    }
+    round={2}
+    selectWinner={[MockFunction]}
+    setCaption={[MockFunction]}
+    setCurrentPlayer={[MockFunction]}
+    unusedIDs={
+      Array [
+        "123",
+        "234",
+        "345",
+      ]
+    }
+    updatePlayerGifs={[MockFunction]}
+    usedCaptions={
+      Array [
+        "Test1",
+        "Test2",
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="adj-down"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-arrow-left"
+          />
+        </button>,
+        <div
+          className="gifs-container judge-choice"
+        >
+          <img
+            alt=""
+            className="gif"
+            onClick={[Function]}
+            src="Test1.gif"
+            style={
+              Object {
+                "transform": "translateX(0px)",
+              }
+            }
+          />
+          <img
+            alt=""
+            className="gif"
+            onClick={[Function]}
+            src="Test2.gif"
+            style={
+              Object {
+                "transform": "translateX(0px)",
+              }
+            }
+          />
+        </div>,
+        <button
+          className="adj-up"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-arrow-right"
+          />
+        </button>,
+      ],
+      "className": "selection",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <i
+            className="fas fa-arrow-left"
+          />,
+          "className": "adj-down",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "fas fa-arrow-left",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "i",
+        },
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt=""
+              className="gif"
+              onClick={[Function]}
+              src="Test1.gif"
+              style={
+                Object {
+                  "transform": "translateX(0px)",
+                }
+              }
+            />,
+            <img
+              alt=""
+              className="gif"
+              onClick={[Function]}
+              src="Test2.gif"
+              style={
+                Object {
+                  "transform": "translateX(0px)",
+                }
+              }
+            />,
+          ],
+          "className": "gifs-container judge-choice",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "uid6",
+            "nodeType": "host",
+            "props": Object {
+              "alt": "",
+              "className": "gif",
+              "onClick": [Function],
+              "src": "Test1.gif",
+              "style": Object {
+                "transform": "translateX(0px)",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": "uid7",
+            "nodeType": "host",
+            "props": Object {
+              "alt": "",
+              "className": "gif",
+              "onClick": [Function],
+              "src": "Test2.gif",
+              "style": Object {
+                "transform": "translateX(0px)",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <i
+            className="fas fa-arrow-right"
+          />,
+          "className": "adj-up",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "fas fa-arrow-right",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "i",
+        },
+        "type": "button",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="adj-down"
+            onClick={[Function]}
+          >
+            <i
+              className="fas fa-arrow-left"
+            />
+          </button>,
+          <div
+            className="gifs-container judge-choice"
+          >
+            <img
+              alt=""
+              className="gif"
+              onClick={[Function]}
+              src="Test1.gif"
+              style={
+                Object {
+                  "transform": "translateX(0px)",
+                }
+              }
+            />
+            <img
+              alt=""
+              className="gif"
+              onClick={[Function]}
+              src="Test2.gif"
+              style={
+                Object {
+                  "transform": "translateX(0px)",
+                }
+              }
+            />
+          </div>,
+          <button
+            className="adj-up"
+            onClick={[Function]}
+          >
+            <i
+              className="fas fa-arrow-right"
+            />
+          </button>,
+        ],
+        "className": "selection",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <i
+              className="fas fa-arrow-left"
+            />,
+            "className": "adj-down",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-arrow-left",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt=""
+                className="gif"
+                onClick={[Function]}
+                src="Test1.gif"
+                style={
+                  Object {
+                    "transform": "translateX(0px)",
+                  }
+                }
+              />,
+              <img
+                alt=""
+                className="gif"
+                onClick={[Function]}
+                src="Test2.gif"
+                style={
+                  Object {
+                    "transform": "translateX(0px)",
+                  }
+                }
+              />,
+            ],
+            "className": "gifs-container judge-choice",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "uid6",
+              "nodeType": "host",
+              "props": Object {
+                "alt": "",
+                "className": "gif",
+                "onClick": [Function],
+                "src": "Test1.gif",
+                "style": Object {
+                  "transform": "translateX(0px)",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": "uid7",
+              "nodeType": "host",
+              "props": Object {
+                "alt": "",
+                "className": "gif",
+                "onClick": [Function],
+                "src": "Test2.gif",
+                "style": Object {
+                  "transform": "translateX(0px)",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <i
+              className="fas fa-arrow-right"
+            />,
+            "className": "adj-up",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-arrow-right",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          "type": "button",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Selection Selection Component should match the snapshot with no players 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Selection
+    addChoice={[MockFunction]}
+    changeJudge={[MockFunction]}
+    choices={
+      Array [
+        Object {
+          "gif": "Test1.gif",
+          "player": 2,
+        },
+        Object {
+          "gif": "Test2.gif",
+          "player": 3,
+        },
+      ]
+    }
+    clearChoices={[MockFunction]}
+    currentPlayer={2}
+    drawNewGifThunk={[MockFunction]}
+    judge={1}
+    nextRound={[MockFunction]}
+    players={Array []}
+    round={2}
+    selectWinner={[MockFunction]}
+    setCaption={[MockFunction]}
+    setCurrentPlayer={[MockFunction]}
+    unusedIDs={
+      Array [
+        "123",
+        "234",
+        "345",
+      ]
+    }
+    updatePlayerGifs={[MockFunction]}
+    usedCaptions={
+      Array [
+        "Test1",
+        "Test2",
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {},
+    "ref": null,
+    "rendered": null,
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {},
+      "ref": null,
+      "rendered": null,
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

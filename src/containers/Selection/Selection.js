@@ -17,7 +17,7 @@ export class Selection extends Component {
   }
 
   adjustCarousel = (adj) => {
-    const { adjustment}  = this.state
+    const { adjustment }  = this.state
     if (adjustment < 4 && adj === 1) {
       this.setState({ adjustment: this.state.adjustment + adj })
     } else if (adjustment > 0 && adj === -1) {
@@ -70,17 +70,11 @@ export class Selection extends Component {
     const { players, currentPlayer, judge, choices, round } = this.props
     const { adjustment } = this.state
     const style = { transform: `translateX(${adjustment * -290}px)` }
+    let gifs = []
 
     if (!players.length) {
       return <div />
-    }
-
-    if (round === players.length * 2 + 1) {
-      return <Redirect to="/newgame" />
-    }
-
-    let gifs = []
-    if (players.length) {
+    } else {
       gifs = players[currentPlayer - 1].gifs.map(gif => {
         return <img
           className="gif"
@@ -91,6 +85,10 @@ export class Selection extends Component {
           onClick={() => this.selectGif(gif.images.fixed_width.url)}
         />
       })
+    }
+    
+    if (round === players.length * 2 + 1) {
+      return <Redirect to="/newgame" />
     }
     
     if (currentPlayer === judge) {
@@ -106,13 +104,13 @@ export class Selection extends Component {
       })
       return (
         <section className="selection">
-          <button onClick={() => this.adjustCarousel(-1)}>
+          <button className="adj-down" onClick={() => this.adjustCarousel(-1)}>
             <i className="fas fa-arrow-left" />
           </button>
           <div className="gifs-container judge-choice">
             {gifs}
           </div>
-          <button onClick={() => this.adjustCarousel(1)}>
+          <button className="adj-up" onClick={() => this.adjustCarousel(1)}>
             <i className="fas fa-arrow-right" />
           </button>
         </section>
@@ -132,13 +130,13 @@ export class Selection extends Component {
 
     return (
       <section className="selection">
-        <button onClick={() => this.adjustCarousel(-1)}>
+        <button className="adj-down" onClick={() => this.adjustCarousel(-1)}>
           <i className="fas fa-arrow-left" />
         </button>
         <div className="gifs-container">
           {gifs}
         </div>
-        <button onClick={() => this.adjustCarousel(1)}>
+        <button className="adj-up" onClick={() => this.adjustCarousel(1)}>
           <i className="fas fa-arrow-right" />
         </button>
       </section>
