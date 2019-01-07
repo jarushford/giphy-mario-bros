@@ -12,8 +12,8 @@ export function NewGame({ players, clearPlayers, clearChoices, setCurrentPlayer,
   })
 
   return (
-    <section>
-      <h1>Final Scores</h1>
+    <section className="final-screen">
+      <h1 className="final-scores">Final Scores</h1>
       <div className="scores-container">
         {finalScores}
       </div>
@@ -27,7 +27,7 @@ export function NewGame({ players, clearPlayers, clearChoices, setCurrentPlayer,
           setUnusedIDs([])
         }}
       >
-        <button>New Game</button>
+        <button className="new-game">New Game</button>
       </Link>
     </section>
   )

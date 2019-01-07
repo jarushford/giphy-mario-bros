@@ -1,0 +1,26 @@
+.final-screen {
+  @include main();
+  font-family: 'Mario';
+}
+
+.final-scores {
+  font-size: 3rem;
+  color: $white;
+  text-shadow: $outlinethick;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.scores-container {
+  h3 {
+    text-align: center;
+    color: $white;
+    text-shadow: $outlinethin;
+    font-size: 1.8rem;
+  }
+}
+
+.new-game {
+  @include btn();
+  margin-top: 30px;
+}
