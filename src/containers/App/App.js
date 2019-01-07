@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch, Link, withRouter } from 'react-router-dom'
+import { clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs } from '../../actions';
+import PropTypes from 'prop-types'
 import Welcome from '../../components/Welcome/Welcome'
 import SelectPlayers from '../SelectPlayers/SelectPlayers'
 import GameBoard from '../GameBoard/GameBoard'
@@ -27,7 +29,16 @@ export class App extends Component {
             return (
               <div>
                 <Round />
-                <Link to='/'><button className="home"><i className="fa fa-home"/></button></Link>
+                <Link 
+                  to='/'
+                  className="Home-Link"
+                  onClick={() => {
+                    this.props.clearPlayers()
+                    this.props.clearChoices()
+                    this.props.setCurrentPlayer(2)
+                    this.props.setJudge()
+                    this.props.setUnusedIDs([])
+                  }}><button className="home"><i className="fa fa-home"/></button></Link>
                 <GameBoard />
                 <Selection />
               </div>
@@ -45,4 +56,21 @@ export const mapStateToProps = (state) => ({
   error: state.error
 })
 
+export const mapDispatchToProps = (dispatch) => ({
+  clearPlayers: () => dispatch(clearPlayers()),
+  clearChoices: () => dispatch(clearChoices()),
+  setCurrentPlayer: (player) => dispatch(setCurrentPlayer(player)),
+  setJudge: () => dispatch(setJudge()),
+  setUnusedIDs: (IDs) => dispatch(setUnusedIDs(IDs))
+})
+
 export default withRouter(connect(mapStateToProps)(App))
+
+NewGame.propTypes = {
+  error: PropTypes.array.isRequired,
+  clearPlayers: PropTypes.func.isRequired,
+  clearChoices: PropTypes.func.isRequired,
+  setCurrentPlayer: PropTypes.func.isRequired,
+  setJudge: PropTypes.func.isRequired,
+  setUnusedIDs: PropTypes.func.isRequired
+}
