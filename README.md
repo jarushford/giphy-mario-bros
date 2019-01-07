@@ -22,13 +22,13 @@ Once you have done this, put the key in a file called apiKey.js in the utils dir
 Run npm start and visit localhost:3000 in your browser
 ```
 
-![alt text](assets/screenshot1.gif)
-![alt text](assets/screenshot2.gif)
-![alt text](assets/screenshot3.gif)
+![alt text](src/assets/screenshot1.gif)
+![alt text](src/assets/screenshot2.gif)
+![alt text](src/assets/screenshot3.gif)
 
 #### Original Wireframes
 
-![alt text](assets/wireframes.gif)
+![alt text](src/assets/wireframes.gif)
 
 #### Author
 
