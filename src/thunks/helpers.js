@@ -1,4 +1,20 @@
 import { gifs } from '../utils/gifs'
+import { apiKey } from '../utils/apiKey'
+
+export const storeGifs = async () => {
+  const unresolvedPromises = gifs.map(async (id) => {
+    const url = `http://api.giphy.com/v1/gifs/${id}?api_key=${apiKey}`
+    const response = await fetch(url)
+        
+    if (!response.ok) {
+      throw Error('Could not fetch GIFs')
+    }
+    const result = await response.json()
+    return result.data
+  })
+  const data = await Promise.all(unresolvedPromises)
+  localStorage.setItem('gifs', JSON.stringify(data))
+}
 
 export const getIDs = (players) => {
   const numNeeded = players * 5
