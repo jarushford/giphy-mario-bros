@@ -4,7 +4,7 @@ import Welcome from '../../components/Welcome/Welcome'
 import SelectPlayers from '../SelectPlayers/SelectPlayers'
 import GameBoard from '../GameBoard/GameBoard'
 import Selection from '../Selection/Selection'
-import Round from '../../components/Round/Round'
+import Round from '../Round/Round'
 import NewGame from '../NewGame/NewGame'
 import '../../main.scss'
 

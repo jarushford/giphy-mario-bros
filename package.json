@@ -42,8 +42,8 @@
       "!src/serviceWorker.js",
       "!src/setupTests.js",
       "!src/reducers/index.js",
-      "!src/utils/captions.js",
-      "!src/utils/gifs.js"
+      "!src/utils/gifs.js",
+      "!src/utils/apiKey.js"
     ]
   }
 }
