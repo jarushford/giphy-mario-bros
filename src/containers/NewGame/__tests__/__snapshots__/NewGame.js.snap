@@ -1,0 +1,433 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewGame NewGame Component should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NewGame
+    clearChoices={[MockFunction]}
+    clearPlayers={[MockFunction]}
+    players={
+      Array [
+        Object {
+          "player": 1,
+          "score": 0,
+        },
+        Object {
+          "player": 2,
+          "score": 0,
+        },
+        Object {
+          "player": 3,
+          "score": 0,
+        },
+      ]
+    }
+    setCurrentPlayer={[MockFunction]}
+    setJudge={[MockFunction]}
+    setUnusedIDs={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="final-scores"
+        >
+          Final Scores
+        </h1>,
+        <div
+          className="scores-container"
+        >
+          <h3>
+            Player 
+            1
+            : 
+            0
+          </h3>
+          <h3>
+            Player 
+            2
+            : 
+            0
+          </h3>
+          <h3>
+            Player 
+            3
+            : 
+            0
+          </h3>
+        </div>,
+        <Link
+          onClick={[Function]}
+          replace={false}
+          to="/select-players"
+        >
+          <button
+            className="new-game"
+          >
+            New Game
+          </button>
+        </Link>,
+      ],
+      "className": "final-screen",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Final Scores",
+          "className": "final-scores",
+        },
+        "ref": null,
+        "rendered": "Final Scores",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              Player 
+              1
+              : 
+              0
+            </h3>,
+            <h3>
+              Player 
+              2
+              : 
+              0
+            </h3>,
+            <h3>
+              Player 
+              3
+              : 
+              0
+            </h3>,
+          ],
+          "className": "scores-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "uid1",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Player ",
+                1,
+                ": ",
+                0,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Player ",
+              1,
+              ": ",
+              0,
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": "uid2",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Player ",
+                2,
+                ": ",
+                0,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Player ",
+              2,
+              ": ",
+              0,
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": "uid3",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Player ",
+                3,
+                ": ",
+                0,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Player ",
+              3,
+              ": ",
+              0,
+            ],
+            "type": "h3",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <button
+            className="new-game"
+          >
+            New Game
+          </button>,
+          "onClick": [Function],
+          "replace": false,
+          "to": "/select-players",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "New Game",
+            "className": "new-game",
+          },
+          "ref": null,
+          "rendered": "New Game",
+          "type": "button",
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="final-scores"
+          >
+            Final Scores
+          </h1>,
+          <div
+            className="scores-container"
+          >
+            <h3>
+              Player 
+              1
+              : 
+              0
+            </h3>
+            <h3>
+              Player 
+              2
+              : 
+              0
+            </h3>
+            <h3>
+              Player 
+              3
+              : 
+              0
+            </h3>
+          </div>,
+          <Link
+            onClick={[Function]}
+            replace={false}
+            to="/select-players"
+          >
+            <button
+              className="new-game"
+            >
+              New Game
+            </button>
+          </Link>,
+        ],
+        "className": "final-screen",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Final Scores",
+            "className": "final-scores",
+          },
+          "ref": null,
+          "rendered": "Final Scores",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                Player 
+                1
+                : 
+                0
+              </h3>,
+              <h3>
+                Player 
+                2
+                : 
+                0
+              </h3>,
+              <h3>
+                Player 
+                3
+                : 
+                0
+              </h3>,
+            ],
+            "className": "scores-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "uid1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Player ",
+                  1,
+                  ": ",
+                  0,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Player ",
+                1,
+                ": ",
+                0,
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": "uid2",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Player ",
+                  2,
+                  ": ",
+                  0,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Player ",
+                2,
+                ": ",
+                0,
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": "uid3",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Player ",
+                  3,
+                  ": ",
+                  0,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Player ",
+                3,
+                ": ",
+                0,
+              ],
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <button
+              className="new-game"
+            >
+              New Game
+            </button>,
+            "onClick": [Function],
+            "replace": false,
+            "to": "/select-players",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "New Game",
+              "className": "new-game",
+            },
+            "ref": null,
+            "rendered": "New Game",
+            "type": "button",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
