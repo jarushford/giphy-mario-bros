@@ -4,6 +4,7 @@
   align-items: center;
   margin-top: 20px;
   animation: fade .5s ease forwards;
+  background: $bg;
 
   button {
     @include btn();
@@ -26,7 +27,7 @@
   height: 200px;
   margin: 20px;
   transition: .3s ease;
-  border: 5px solid $bg;
+  border: 5px solid $red;
   border-radius: 4px;
   cursor: pointer;
 

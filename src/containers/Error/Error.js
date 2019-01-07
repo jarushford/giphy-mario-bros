@@ -2,6 +2,7 @@ import React from 'react'
 import { clearError } from '../../actions'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 export function Error({ clearError }) {
   return (
@@ -19,3 +20,7 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(null, mapDispatchToProps)(Error)
+
+Error.propTypes = {
+  clearError: PropTypes.func.isRequired
+}

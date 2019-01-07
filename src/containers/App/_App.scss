@@ -9,12 +9,19 @@
   background: url('./assets/bg.jpg');
   background-size: cover;
   padding-top: 30px;
+  background-color: rgba(200, 200, 200, 0.35);
+  background-blend-mode: lighten;
 }
 
 .home {
   @include btn();
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 150px;
+  top: 15px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+
+  i {
+    color: $white;
+  }
 }

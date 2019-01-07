@@ -29,12 +29,17 @@ ShallowWrapper {
           path="/select-players"
         />
         <Route
+          exact={true}
           path="/home"
           render={[Function]}
         />
         <Route
           component={[Function]}
+          exact={true}
           path="/newgame"
+        />
+        <Route
+          component={[Function]}
         />
       </Switch>,
       "className": "App",
@@ -57,12 +62,17 @@ ShallowWrapper {
             path="/select-players"
           />,
           <Route
+            exact={true}
             path="/home"
             render={[Function]}
           />,
           <Route
             component={[Function]}
+            exact={true}
             path="/newgame"
+          />,
+          <Route
+            component={[Function]}
           />,
         ],
       },
@@ -99,6 +109,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "exact": true,
             "path": "/home",
             "render": [Function],
           },
@@ -112,7 +123,19 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
+            "exact": true,
             "path": "/newgame",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -141,12 +164,17 @@ ShallowWrapper {
             path="/select-players"
           />
           <Route
+            exact={true}
             path="/home"
             render={[Function]}
           />
           <Route
             component={[Function]}
+            exact={true}
             path="/newgame"
+          />
+          <Route
+            component={[Function]}
           />
         </Switch>,
         "className": "App",
@@ -169,12 +197,17 @@ ShallowWrapper {
               path="/select-players"
             />,
             <Route
+              exact={true}
               path="/home"
               render={[Function]}
             />,
             <Route
               component={[Function]}
+              exact={true}
               path="/newgame"
+            />,
+            <Route
+              component={[Function]}
             />,
           ],
         },
@@ -211,6 +244,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "exact": true,
               "path": "/home",
               "render": [Function],
             },
@@ -224,13 +258,101 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "component": [Function],
+              "exact": true,
               "path": "/newgame",
             },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`App should match the snapshot with an error 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App
+    error="error"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <Connect(Error) />,
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {},
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Connect(Error) />,
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
         "type": [Function],
       },
       "type": "div",
