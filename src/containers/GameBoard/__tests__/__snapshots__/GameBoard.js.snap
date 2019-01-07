@@ -1,0 +1,802 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameBoard should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GameBoard
+    caption={
+      Array [
+        "Test Caption",
+      ]
+    }
+    currentPlayer={3}
+    judge={2}
+    players={
+      Array [
+        Object {
+          "player": 1,
+          "score": 0,
+        },
+        Object {
+          "player": 2,
+          "score": 0,
+        },
+        Object {
+          "player": 3,
+          "score": 0,
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="title"
+        >
+          Giphy Mario Bros.
+        </h1>,
+        <div
+          className="player-scores"
+        >
+          <PlayerScore
+            active={false}
+            player={1}
+            score={0}
+          />
+          <PlayerScore
+            active={true}
+            player={2}
+            score={0}
+          />
+          <PlayerScore
+            active={false}
+            player={3}
+            score={0}
+          />
+        </div>,
+        <h3>
+          Test Caption
+        </h3>,
+        <h2>
+          Player 
+          3
+          , choose a GIF
+        </h2>,
+      ],
+      "className": "game-board",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Giphy Mario Bros.",
+          "className": "title",
+        },
+        "ref": null,
+        "rendered": "Giphy Mario Bros.",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <PlayerScore
+              active={false}
+              player={1}
+              score={0}
+            />,
+            <PlayerScore
+              active={true}
+              player={2}
+              score={0}
+            />,
+            <PlayerScore
+              active={false}
+              player={3}
+              score={0}
+            />,
+          ],
+          "className": "player-scores",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "uid1",
+            "nodeType": "function",
+            "props": Object {
+              "active": false,
+              "player": 1,
+              "score": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "uid2",
+            "nodeType": "function",
+            "props": Object {
+              "active": true,
+              "player": 2,
+              "score": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "uid3",
+            "nodeType": "function",
+            "props": Object {
+              "active": false,
+              "player": 3,
+              "score": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Test Caption",
+        },
+        "ref": null,
+        "rendered": "Test Caption",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Player ",
+            3,
+            ", choose a GIF",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Player ",
+          3,
+          ", choose a GIF",
+        ],
+        "type": "h2",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="title"
+          >
+            Giphy Mario Bros.
+          </h1>,
+          <div
+            className="player-scores"
+          >
+            <PlayerScore
+              active={false}
+              player={1}
+              score={0}
+            />
+            <PlayerScore
+              active={true}
+              player={2}
+              score={0}
+            />
+            <PlayerScore
+              active={false}
+              player={3}
+              score={0}
+            />
+          </div>,
+          <h3>
+            Test Caption
+          </h3>,
+          <h2>
+            Player 
+            3
+            , choose a GIF
+          </h2>,
+        ],
+        "className": "game-board",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Giphy Mario Bros.",
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": "Giphy Mario Bros.",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <PlayerScore
+                active={false}
+                player={1}
+                score={0}
+              />,
+              <PlayerScore
+                active={true}
+                player={2}
+                score={0}
+              />,
+              <PlayerScore
+                active={false}
+                player={3}
+                score={0}
+              />,
+            ],
+            "className": "player-scores",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "uid1",
+              "nodeType": "function",
+              "props": Object {
+                "active": false,
+                "player": 1,
+                "score": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "uid2",
+              "nodeType": "function",
+              "props": Object {
+                "active": true,
+                "player": 2,
+                "score": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "uid3",
+              "nodeType": "function",
+              "props": Object {
+                "active": false,
+                "player": 3,
+                "score": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Test Caption",
+          },
+          "ref": null,
+          "rendered": "Test Caption",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Player ",
+              3,
+              ", choose a GIF",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Player ",
+            3,
+            ", choose a GIF",
+          ],
+          "type": "h2",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`GameBoard should match the snapshot if the current player is the judge 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GameBoard
+    caption={
+      Array [
+        "Test Caption",
+      ]
+    }
+    currentPlayer={2}
+    judge={2}
+    players={
+      Array [
+        Object {
+          "player": 1,
+          "score": 0,
+        },
+        Object {
+          "player": 2,
+          "score": 0,
+        },
+        Object {
+          "player": 3,
+          "score": 0,
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="title"
+        >
+          Giphy Mario Bros.
+        </h1>,
+        <div
+          className="player-scores"
+        >
+          <PlayerScore
+            active={false}
+            player={1}
+            score={0}
+          />
+          <PlayerScore
+            active={true}
+            player={2}
+            score={0}
+          />
+          <PlayerScore
+            active={false}
+            player={3}
+            score={0}
+          />
+        </div>,
+        <h3>
+          Test Caption
+        </h3>,
+        <h2>
+          Player 
+          2
+          , choose a winner
+        </h2>,
+      ],
+      "className": "game-board",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Giphy Mario Bros.",
+          "className": "title",
+        },
+        "ref": null,
+        "rendered": "Giphy Mario Bros.",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <PlayerScore
+              active={false}
+              player={1}
+              score={0}
+            />,
+            <PlayerScore
+              active={true}
+              player={2}
+              score={0}
+            />,
+            <PlayerScore
+              active={false}
+              player={3}
+              score={0}
+            />,
+          ],
+          "className": "player-scores",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "uid4",
+            "nodeType": "function",
+            "props": Object {
+              "active": false,
+              "player": 1,
+              "score": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "uid5",
+            "nodeType": "function",
+            "props": Object {
+              "active": true,
+              "player": 2,
+              "score": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "uid6",
+            "nodeType": "function",
+            "props": Object {
+              "active": false,
+              "player": 3,
+              "score": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Test Caption",
+        },
+        "ref": null,
+        "rendered": "Test Caption",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Player ",
+            2,
+            ", choose a winner",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Player ",
+          2,
+          ", choose a winner",
+        ],
+        "type": "h2",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="title"
+          >
+            Giphy Mario Bros.
+          </h1>,
+          <div
+            className="player-scores"
+          >
+            <PlayerScore
+              active={false}
+              player={1}
+              score={0}
+            />
+            <PlayerScore
+              active={true}
+              player={2}
+              score={0}
+            />
+            <PlayerScore
+              active={false}
+              player={3}
+              score={0}
+            />
+          </div>,
+          <h3>
+            Test Caption
+          </h3>,
+          <h2>
+            Player 
+            2
+            , choose a winner
+          </h2>,
+        ],
+        "className": "game-board",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Giphy Mario Bros.",
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": "Giphy Mario Bros.",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <PlayerScore
+                active={false}
+                player={1}
+                score={0}
+              />,
+              <PlayerScore
+                active={true}
+                player={2}
+                score={0}
+              />,
+              <PlayerScore
+                active={false}
+                player={3}
+                score={0}
+              />,
+            ],
+            "className": "player-scores",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "uid4",
+              "nodeType": "function",
+              "props": Object {
+                "active": false,
+                "player": 1,
+                "score": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "uid5",
+              "nodeType": "function",
+              "props": Object {
+                "active": true,
+                "player": 2,
+                "score": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "uid6",
+              "nodeType": "function",
+              "props": Object {
+                "active": false,
+                "player": 3,
+                "score": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Test Caption",
+          },
+          "ref": null,
+          "rendered": "Test Caption",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Player ",
+              2,
+              ", choose a winner",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Player ",
+            2,
+            ", choose a winner",
+          ],
+          "type": "h2",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`GameBoard should match the snapshot with no players 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GameBoard
+    caption={
+      Array [
+        "Test Caption",
+      ]
+    }
+    currentPlayer={3}
+    judge={2}
+    players={Array []}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {},
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {},
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
