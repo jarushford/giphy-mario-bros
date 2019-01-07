@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs } from '../../actions';
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import { uid } from 'react-uid'
 
 export function NewGame({ players, clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs }) {
@@ -46,3 +47,12 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps)(NewGame)
+
+NewGame.propTypes = {
+  players: PropTypes.array.isRequired,
+  clearPlayers: PropTypes.func.isRequired,
+  clearChoices: PropTypes.func.isRequired,
+  setCurrentPlayer: PropTypes.func.isRequired,
+  setJudge: PropTypes.func.isRequired,
+  setUnusedIDs: PropTypes.func.isRequired
+}

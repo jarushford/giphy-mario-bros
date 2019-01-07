@@ -3,6 +3,7 @@ import Loading from '../../components/Loading/Loading'
 import PlayerScore from '../../components/PlayerScore/PlayerScore'
 import { connect } from 'react-redux'
 import { uid } from 'react-uid';
+import PropTypes from 'prop-types'
 import '../../main.scss'
 
 export function GameBoard({ players, judge, caption, currentPlayer }) {
@@ -42,3 +43,10 @@ export const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(GameBoard)
+
+GameBoard.propTypes = {
+  players: PropTypes.array.isRequired,
+  judge: PropTypes.number.isRequired,
+  caption: PropTypes.array.isRequired,
+  currentPlayer: PropTypes.number.isRequired
+}

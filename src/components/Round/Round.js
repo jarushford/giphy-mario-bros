@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import '../../main.scss'
 
 export function Round({ round, players }) {
@@ -22,3 +23,8 @@ export const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(Round)
+
+Round.propTypes = {
+  round: PropTypes.number.isRequired,
+  players: PropTypes.array.isRequired
+}

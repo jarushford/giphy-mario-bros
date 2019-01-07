@@ -5,6 +5,7 @@ import { captionHelper } from '../../utils/captions'
 import { drawNewGifThunk } from '../../thunks/drawNewGif'
 import { uid } from 'react-uid'
 import { Redirect } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 export class Selection extends Component {
   constructor() {
@@ -168,3 +169,22 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Selection)
+
+Selection.propTypes = {
+  players: PropTypes.array.isRequired,
+  currentPlayer: PropTypes.number.isRequired,
+  unusedIDs: PropTypes.array.isRequired,
+  judge: PropTypes.number.isRequired,
+  choices: PropTypes.array.isRequired,
+  usedCaptions: PropTypes.array.isRequired,
+  round: PropTypes.number.isRequired,
+  addChoice: PropTypes.func.isRequired,
+  setCurrentPlayer: PropTypes.func.isRequired,
+  updatePlayerGifs: PropTypes.func.isRequired,
+  drawNewGifThunk: PropTypes.func.isRequired,
+  selectWinner: PropTypes.func.isRequired,
+  changeJudge: PropTypes.func.isRequired,
+  clearChoices: PropTypes.func.isRequired,
+  setCaption: PropTypes.func.isRequired,
+  nextRound: PropTypes.func.isRequired
+}

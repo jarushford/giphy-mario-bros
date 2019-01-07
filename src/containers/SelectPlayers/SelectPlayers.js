@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { setPlayersThunk } from '../../thunks/setPlayers'
 import { setCaption } from '../../actions'
 import { captionHelper } from '../../utils/captions'
+import PropTypes from 'prop-types'
 import '../../main.scss'
 
 export function SelectPlayers({ setPlayers, usedCaptions, setCaption }) {
@@ -40,3 +41,9 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SelectPlayers)
+
+SelectPlayers.propTypes = {
+  usedCaptions: PropTypes.array.isRequired,
+  setPlayers: PropTypes.func.isRequired,
+  setCaption: PropTypes.func.isRequired
+}
