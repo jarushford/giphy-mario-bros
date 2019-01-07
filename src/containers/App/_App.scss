@@ -10,3 +10,11 @@
   background-size: cover;
   padding-top: 30px;
 }
+
+.home {
+  @include btn();
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 150px;
+}

@@ -1,0 +1,17 @@
+.error {
+  @include main();
+
+  h1 {
+    font-size: 2rem;
+    color: $white;
+    text-shadow: $outlinethick;
+    text-align: center;
+    font-family: 'Mario';
+  }
+
+  button {
+    @include btn();
+    width: 300px;
+    cursor: pointer;
+  }
+}
