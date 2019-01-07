@@ -1,6 +1,6 @@
 import React from 'react'
 import { NewGame, mapStateToProps, mapDispatchToProps } from '../NewGame'
-import { clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs } from '../../../actions'
+import { clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs, resetRound, clearCaptions } from '../../../actions'
 import { shallow } from 'enzyme'
 
 describe('NewGame', () => {
@@ -10,6 +10,8 @@ describe('NewGame', () => {
   let mockSetPlayer
   let mockSetJudge
   let mockSetIDs
+  let mockResetRound
+  let mockClearCaptions
   let wrapper
 
   beforeEach(() => {
@@ -19,6 +21,8 @@ describe('NewGame', () => {
     mockSetPlayer = jest.fn()
     mockSetJudge = jest.fn()
     mockSetIDs = jest.fn()
+    mockResetRound = jest.fn()
+    mockClearCaptions = jest.fn()
     wrapper = shallow(<NewGame 
       players={mockPlayers}
       clearPlayers={mockClearPlayers}
@@ -26,6 +30,8 @@ describe('NewGame', () => {
       setCurrentPlayer={mockSetPlayer}
       setJudge={mockSetJudge}
       setUnusedIDs={mockSetIDs}
+      resetRound={mockResetRound}
+      clearCaptions={mockClearCaptions}
     />)
   })
 
@@ -62,6 +68,18 @@ describe('NewGame', () => {
       wrapper.find('Link').simulate('click')
 
       expect(mockSetIDs).toBeCalled()
+    })
+
+    it('should call resetRound when game is reset', () => {
+      wrapper.find('Link').simulate('click')
+
+      expect(mockResetRound).toBeCalled()
+    })
+
+    it('should call clearCaptions when game is reset', () => {
+      wrapper.find('Link').simulate('click')
+
+      expect(mockClearCaptions).toBeCalled()
     })
   })
 
@@ -130,6 +148,24 @@ describe('NewGame', () => {
 
       const mappedProps = mapDispatchToProps(mockDispatch)
       mappedProps.setUnusedIDs([1, 2, 3])
+
+      expect(mockDispatch).toBeCalledWith(expected)
+    })
+
+    it('should dispatch resetRound when the prop clearPlayers is called', () => {
+      const expected = resetRound()
+
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.resetRound()
+
+      expect(mockDispatch).toBeCalledWith(expected)
+    })
+
+    it('should dispatch clearCaptions when the prop clearPlayers is called', () => {
+      const expected = clearCaptions()
+
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.clearCaptions()
 
       expect(mockDispatch).toBeCalledWith(expected)
     })

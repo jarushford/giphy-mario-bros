@@ -7,7 +7,7 @@ import { MemoryRouter, Link } from 'react-router-dom'
 import Round from '../../Round/Round'
 import GameBoard from '../../GameBoard/GameBoard'
 import Selection from '../../Selection/Selection'
-import { clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs } from '../../../actions';
+import { clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs, resetRound, clearCaptions } from '../../../actions';
 
 describe('App', () => {
   let wrapper
@@ -17,6 +17,8 @@ describe('App', () => {
   let mockSetJudge
   let mockSetIDs
   let mockError
+  let mockResetRound
+  let mockClearCaptions
 
   beforeEach(() => {
     mockError = ''
@@ -25,6 +27,8 @@ describe('App', () => {
     mockSetPlayer = jest.fn()
     mockSetJudge = jest.fn()
     mockSetIDs = jest.fn()
+    mockResetRound = jest.fn()
+    mockClearCaptions = jest.fn()
     wrapper = shallow(<App 
       error={mockError}
       clearPlayers={mockClearPlayers}
@@ -32,17 +36,26 @@ describe('App', () => {
       setCurrentPlayer={mockSetPlayer}
       setJudge={mockSetJudge}
       setUnusedIDs={mockSetIDs}
+      resetRound={mockResetRound}
+      clearCaptions={mockClearCaptions}
     />)
   })
 
   it('should match the snapshot', () => {
-    const wrapper = shallow(<App />)
-
     expect(wrapper).toMatchSnapshot()
   })
 
   it('should match the snapshot with an error', () => {
-    const wrapper = shallow(<App error={'error'} />)
+    const wrapper = shallow(<App 
+      error='Error'
+      clearPlayers={mockClearPlayers}
+      clearChoices={mockClearChoices}
+      setCurrentPlayer={mockSetPlayer}
+      setJudge={mockSetJudge}
+      setUnusedIDs={mockSetIDs}
+      resetRound={mockResetRound}
+      clearCaptions={mockClearCaptions}
+    />)
 
     expect(wrapper).toMatchSnapshot()
   })
@@ -71,7 +84,16 @@ describe('App', () => {
         unusedIDs: []
       }))}>
         <MemoryRouter initialEntries={['/home']}>
-          <App />
+          <App 
+            error={mockError}
+            clearPlayers={mockClearPlayers}
+            clearChoices={mockClearChoices}
+            setCurrentPlayer={mockSetPlayer}
+            setJudge={mockSetJudge}
+            setUnusedIDs={mockSetIDs}
+            resetRound={mockResetRound}
+            clearCaptions={mockClearCaptions}
+          />
         </MemoryRouter>
       </Provider>
     )
@@ -101,6 +123,8 @@ describe('App', () => {
             setCurrentPlayer={mockSetPlayer}
             setJudge={mockSetJudge}
             setUnusedIDs={mockSetIDs}
+            resetRound={mockResetRound}
+            clearCaptions={mockClearCaptions}
           />
         </MemoryRouter>
       </Provider>
@@ -130,6 +154,8 @@ describe('App', () => {
             setCurrentPlayer={mockSetPlayer}
             setJudge={mockSetJudge}
             setUnusedIDs={mockSetIDs}
+            resetRound={mockResetRound}
+            clearCaptions={mockClearCaptions}
           />
         </MemoryRouter>
       </Provider>
@@ -159,6 +185,8 @@ describe('App', () => {
             setCurrentPlayer={mockSetPlayer}
             setJudge={mockSetJudge}
             setUnusedIDs={mockSetIDs}
+            resetRound={mockResetRound}
+            clearCaptions={mockClearCaptions}
           />
         </MemoryRouter>
       </Provider>
@@ -188,6 +216,8 @@ describe('App', () => {
             setCurrentPlayer={mockSetPlayer}
             setJudge={mockSetJudge}
             setUnusedIDs={mockSetIDs}
+            resetRound={mockResetRound}
+            clearCaptions={mockClearCaptions}
           />
         </MemoryRouter>
       </Provider>
@@ -217,6 +247,8 @@ describe('App', () => {
             setCurrentPlayer={mockSetPlayer}
             setJudge={mockSetJudge}
             setUnusedIDs={mockSetIDs}
+            resetRound={mockResetRound}
+            clearCaptions={mockClearCaptions}
           />
         </MemoryRouter>
       </Provider>
@@ -224,6 +256,68 @@ describe('App', () => {
     mountWrapper.find('.Home-Link').first().simulate('click')
 
     expect(mockSetIDs).toBeCalled()
+  })
+
+  it('should call resetRound when game is reset', () => {
+    const mountWrapper = mount(
+      <Provider store={createStore(() => ({
+        round: 1,
+        players: [],
+        choices: [],
+        usedCaptions: [],
+        currentPlayer: 1,
+        judge: 3,
+        caption: [],
+        unusedIDs: []
+      }))}>
+        <MemoryRouter initialEntries={['/home']}>
+          <App 
+            error={mockError}
+            clearPlayers={mockClearPlayers}
+            clearChoices={mockClearChoices}
+            setCurrentPlayer={mockSetPlayer}
+            setJudge={mockSetJudge}
+            setUnusedIDs={mockSetIDs}
+            resetRound={mockResetRound}
+            clearCaptions={mockClearCaptions}
+          />
+        </MemoryRouter>
+      </Provider>
+    )
+    mountWrapper.find('.Home-Link').first().simulate('click')
+
+    expect(mockResetRound).toBeCalled()
+  })
+
+  it('should call clearCaptions when game is reset', () => {
+    const mountWrapper = mount(
+      <Provider store={createStore(() => ({
+        round: 1,
+        players: [],
+        choices: [],
+        usedCaptions: [],
+        currentPlayer: 1,
+        judge: 3,
+        caption: [],
+        unusedIDs: []
+      }))}>
+        <MemoryRouter initialEntries={['/home']}>
+          <App 
+            error={mockError}
+            clearPlayers={mockClearPlayers}
+            clearChoices={mockClearChoices}
+            setCurrentPlayer={mockSetPlayer}
+            setJudge={mockSetJudge}
+            setUnusedIDs={mockSetIDs}
+            resetRound={mockResetRound}
+            clearCaptions={mockClearCaptions}
+          />
+        </MemoryRouter>
+      </Provider>
+    )
+    mountWrapper.find('.Home-Link').first().simulate('click')
+
+    expect(mockClearCaptions).toBeCalled()
   })
 
   describe('mapDispatchToProps', () => {
@@ -274,6 +368,24 @@ describe('App', () => {
 
       const mappedProps = mapDispatchToProps(mockDispatch)
       mappedProps.setUnusedIDs([1, 2, 3])
+
+      expect(mockDispatch).toBeCalledWith(expected)
+    })
+
+    it('should dispatch resetRound when the prop clearPlayers is called', () => {
+      const expected = resetRound()
+
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.resetRound()
+
+      expect(mockDispatch).toBeCalledWith(expected)
+    })
+
+    it('should dispatch clearCaptions when the prop clearPlayers is called', () => {
+      const expected = clearCaptions()
+
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.clearCaptions()
 
       expect(mockDispatch).toBeCalledWith(expected)
     })

@@ -4,6 +4,7 @@ exports[`NewGame NewGame Component should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NewGame
+    clearCaptions={[MockFunction]}
     clearChoices={[MockFunction]}
     clearPlayers={[MockFunction]}
     players={
@@ -22,6 +23,7 @@ ShallowWrapper {
         },
       ]
     }
+    resetRound={[MockFunction]}
     setCurrentPlayer={[MockFunction]}
     setJudge={[MockFunction]}
     setUnusedIDs={[MockFunction]}

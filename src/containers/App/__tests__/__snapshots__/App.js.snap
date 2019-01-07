@@ -3,7 +3,16 @@
 exports[`App should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <App
+    clearCaptions={[MockFunction]}
+    clearChoices={[MockFunction]}
+    clearPlayers={[MockFunction]}
+    error=""
+    resetRound={[MockFunction]}
+    setCurrentPlayer={[MockFunction]}
+    setJudge={[MockFunction]}
+    setUnusedIDs={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -306,7 +315,14 @@ exports[`App should match the snapshot with an error 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
-    error="error"
+    clearCaptions={[MockFunction]}
+    clearChoices={[MockFunction]}
+    clearPlayers={[MockFunction]}
+    error="Error"
+    resetRound={[MockFunction]}
+    setCurrentPlayer={[MockFunction]}
+    setJudge={[MockFunction]}
+    setUnusedIDs={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs } from '../../actions';
+import { clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs, resetRound, clearCaptions } from '../../actions';
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { uid } from 'react-uid'
 
-export function NewGame({ players, clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs }) {
+export function NewGame({ players, clearPlayers, clearChoices, setCurrentPlayer, setJudge, setUnusedIDs, resetRound, clearCaptions }) {
   const finalScores = players.map(player => {
     return (
       <h3 key={uid(player)}>Player {player.player}: {player.score}</h3>
@@ -26,6 +26,8 @@ export function NewGame({ players, clearPlayers, clearChoices, setCurrentPlayer,
           setCurrentPlayer(2)
           setJudge()
           setUnusedIDs([])
+          resetRound()
+          clearCaptions()
         }}
       >
         <button className="new-game">New Game</button>
@@ -43,10 +45,12 @@ export const mapDispatchToProps = (dispatch) => ({
   clearChoices: () => dispatch(clearChoices()),
   setCurrentPlayer: (player) => dispatch(setCurrentPlayer(player)),
   setJudge: () => dispatch(setJudge()),
-  setUnusedIDs: (IDs) => dispatch(setUnusedIDs(IDs))
+  setUnusedIDs: (IDs) => dispatch(setUnusedIDs(IDs)),
+  resetRound: () => dispatch(resetRound()),
+  clearCaptions: () => dispatch(clearCaptions())
 })
 
-export default connect(mapStateToProps)(NewGame)
+export default connect(mapStateToProps, mapDispatchToProps)(NewGame)
 
 NewGame.propTypes = {
   players: PropTypes.array.isRequired,
@@ -54,5 +58,7 @@ NewGame.propTypes = {
   clearChoices: PropTypes.func.isRequired,
   setCurrentPlayer: PropTypes.func.isRequired,
   setJudge: PropTypes.func.isRequired,
-  setUnusedIDs: PropTypes.func.isRequired
+  setUnusedIDs: PropTypes.func.isRequired,
+  resetRound: PropTypes.func.isRequired,
+  clearCaptions: PropTypes.func.isRequired
 }
